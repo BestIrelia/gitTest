@@ -1,0 +1,14 @@
+1、初始化：git init
+2、添加文件（本地仓库缓存）：git add 文件名.后缀名
+3、提交文件（远程仓库）：git commit -m '说明提交原因'
+
+
+更多命令：
+查看git当前状态：git status
+显示对文件进行了哪些操作：git log
+查看改动了哪些信息：git diff
+恢复版本：git reset --hard 接commit的id（前六位即可，查看id方式为git log或git reflog）
+添加一个origin（上传到远程服务器github）：
+	git remote add origin https://github.com/zzlTedu/HelloGit.git 
+	git push -u origin master (然后填写GitHub账号)
+下载到本地：git clone https://github.com/zzlTedu/HelloGit.git 
