@@ -1,15 +1,30 @@
 1、初始化：git init
 2、文件夹内新建文件并添加文件到本地仓库缓存：git add 文件名.后缀名
 3、提交文件（远程仓库）：git commit -m '说明提交原因'
-每次提交都重复2、3步
+每次添加新文件或修改文件提交都重复2、3步
  
 
 更多命令：
 查看git当前状态：git status
+
 显示对文件进行了哪些操作：git log
+
 查看改动了哪些信息：git diff
+
 恢复版本：git reset --hard 接commit的id（前六位即可，查看id方式为git log或git reflog）
+ 
+撤销修改：git checkout -- 文件名
+	该命令把文件在工作区的修改全部撤销，这里有两种情况：
+一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+命令git reset HEAD 文件名 可以把暂存区的修改撤销掉
+ 
+删除版本库中文件：git rm 文件名
+	 然后git commit -m提交删除信息。如果出翔误删，可以使用git checkout -- 文件名 进行恢复
+ 
 添加一个origin（上传到远程服务器github）：
 	git remote add origin https://github.com/zzlTedu/HelloGit.git 
 	git push -u origin master (然后填写GitHub账号)
+以上命令是第一次提交到远程仓库所需，之后提交到这里只需要 git push origin master 就行
+	
 下载到本地：git clone https://github.com/zzlTedu/HelloGit.git 
