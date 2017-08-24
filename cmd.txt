@@ -1,4 +1,4 @@
-1、初始化：git init
+﻿1、初始化：git init
 2、文件夹内新建文件并添加文件到本地仓库缓存：git add 文件名.后缀名
 3、提交文件（远程仓库）：git commit -m '说明提交原因'
 每次添加新文件或修改文件提交都重复2、3步
@@ -26,5 +26,6 @@
 	git remote add origin https://github.com/zzlTedu/HelloGit.git 
 	git push -u origin master (然后填写GitHub账号)
 以上命令是第一次提交到远程仓库所需，之后提交到这里只需要 git push origin master 就行
+如果远程库中有readme文件，二本地没有，在push前需要进行git pull --rebase origin master命令进行代码合并
 	
 下载到本地：git clone https://github.com/zzlTedu/HelloGit.git 
