@@ -26,7 +26,7 @@
 	git remote add origin https://github.com/zzlTedu/HelloGit.git 
 	git push -u origin master (然后填写GitHub账号)
 以上命令是第一次提交到远程仓库所需，之后提交到这里只需要 git push origin master 就行
-如果远程库中有readme文件，二本地没有，在push前需要进行git pull --rebase origin master命令进行代码合并
+如果远程库中有readme文件，而本地没有，在push前需要进行git pull --rebase origin master命令进行代码合并
 	
 下载到本地：git clone https://github.com/zzlTedu/HelloGit.git 
 
@@ -46,13 +46,7 @@ dev分支做新一期开发，
 dev分支没开发完，还不想commit，但要修改bug时，可以储存工作区：dev分支上git stash
 然后去master新建bug分支修改bug，修改完毕，切回dev，恢复工作区并删除stash：git stash pop
 ======================================================================================
-
-我是dev分支啦啦啦
-
-测试20171110
-
-再次测试20171110
-
-第三次测试20171110
-
-第四次20171110
+=====================dev分支20190913更新==============================================
+使用git reset --hard commitId来进行恢复版本的时候，假如这个版本已经提交到远程，这时候使用git push会提示你当前版本比远程版本落后
+而不能提交，这时候需要使用git push  --force来强制提交
+======================================================================================
